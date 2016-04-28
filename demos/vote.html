@@ -21,10 +21,10 @@
 
     <div class="row" style="position:relative;">
 
-      <aside class="large-2 small-12 columns years">
+      <aside class="large-2 small-12 columns">
       <div class="panel">
         <h5>Voting</h5>
-        <ul>
+        <ul class="side-nav">
           <li ng-repeat="year in years">
             <input ng-model="$parent.selected_year" type="radio" name="years" ng-value="year" id="year_{{ year }}">
             <label for="year_{{ year }}">{{ year }}</label>
