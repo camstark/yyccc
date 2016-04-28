@@ -1,4 +1,4 @@
-chord-transitions
+chord-transitions from delimited.io
 =================
 
 Need bower installed.
