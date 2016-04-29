@@ -130,12 +130,12 @@ console.log(data)
               importer1: first,
               importer2: x,
               flow1: d3.sum(data, function(d) { //voted the same
-                if (d[first] === d[x] & d[comparevar] === compareval) {
+                if (d[first] === d[x] & d[first] != '--not specified--' & d[comparevar] === compareval) {
                   return 1;
                 }
               }),
               flow2: d3.sum(data, function(d) { //voted differently
-                if (d[first] === d[x]  & d[comparevar] === compareval) {
+                if (d[first] === d[x]  & d[first] != '--not specified--' & d[comparevar] === compareval) {
                   return 1;
                 }
               })
