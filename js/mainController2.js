@@ -90,7 +90,8 @@ function ($scope) {
   //   $scope.update();
   // });
 
-  d3.csv('data/Calgary_2013-2017_20160418.csv', function (err, data) {
+  // d3.csv('data/Calgary_2013-2017_20160418.csv', function (err, data) {
+  d3.csv('data/Calgary-Council-2013-2017_2016-10-01.csv', function (err, data) {
 
     var councillors = ["A. Chabot", "B. Pincott", "D. Colley-Urquhart", "D. Farrell", "E. Woolley", "G-C. Carra", "J. Magliocca", "J. Stevenson", "N. Nenshi", "P. Demong", "R. Jones", "R. Pootmans", "S. Chu", "S. Keating", "W. Sutherland"];
 
@@ -104,13 +105,13 @@ function ($scope) {
       })
     })
     data = data.filter(function(d) {return d.exclude != -15 & d.Status != "PASSED UNANIMOUSLY"})
-    console.log(data);
+    // console.log(data);
     data1 = pairwise(councillors, 'Status', 'Passed');
     data2 = pairwise(councillors, 'Status', 'Failed');
     data3 = pairwise2(councillors, 'For', 1);
     data4 = pairwise2(councillors, 'Against', 0);
     data = data1.concat(data2).concat(data3).concat(data4)
-console.log(data)
+// console.log(data)
 
     data.forEach(function(d) {
       if (!$scope.master[d.year]) {
